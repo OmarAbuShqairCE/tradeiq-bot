@@ -3240,4 +3240,7 @@ if __name__ == '__main__':
     print("   📊 Volume: OBV, CMF, AD, MFI, EMV, FI")
     print("   💰 Price: AVGPRICE, MEDPRICE, TYPPRICE, WCPRICE")
     print("   🎯 Misc: SAR, ULTOSC, TSI")
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    #app.run(debug=True, host='0.0.0.0', port=5000)
+    
+    port = int(os.environ.get("PORT", 5000))
+    app.run(debug=False, host="0.0.0.0", port=port)
